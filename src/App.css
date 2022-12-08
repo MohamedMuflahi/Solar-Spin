@@ -1,0 +1,59 @@
+.main{
+  width: 100vw; /* CHANGE THIS FOR WINDOW SIZE*/
+  height: 100vh; /* CHANGE THIS FOR WINDOW SIZE*/
+  border: 1px dotted red;
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.main > * {
+  grid-column: 1;
+  grid-row: 1;
+}
+.item{
+  width: 20px; /* CHANGE THIS FOR PLANET SIZE*/
+  height: 20px; /* CHANGE THIS FOR PLANET SIZE*/
+  border-radius: 50%;
+  animation: spinAround 6s linear infinite;
+}
+@keyframes spinAround{
+  from{
+    transform: rotate(0deg) translate(var(--c));
+  }
+  to{
+    transform: rotate(360deg) translate(var(--c));
+  }
+}
+.center{
+  width: 20px; /* CHANGE THIS FOR SUN SIZE*/
+  height: 20px; /* CHANGE THIS FOR SUN SIZE*/
+  background-color: yellow;
+  border-radius: 50%;
+}
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.earth {
+  --c: 90px; /* CHANGE THIS FOR DISTANCE FROM THE SUN */
+  background-color: green;
+}
+.mercury {
+  --c: 30px; /* CHANGE THIS FOR DISTANCE FROM THE SUN */
+  background-color: gray;
+
+}
+.venus {
+  --c: 60px; /* CHANGE THIS FOR DISTANCE FROM THE SUN */
+  background-color: red;
+  width: 100px; /* ADD THIS FOR DIFFERENT SIZE */
+  height: 100px;
+
+}
+.mars {
+  --c: 120px; /* CHANGE THIS FOR DISTANCE FROM THE SUN */
+  background-color: orange;
+}
